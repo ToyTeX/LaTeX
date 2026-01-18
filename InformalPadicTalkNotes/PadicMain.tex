@@ -1,0 +1,43 @@
+\documentclass[letterpaper]{article}
+\usepackage{natbib}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{thmtools}
+\usepackage{graphicx} 
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{pifont}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{subfiles}
+\usepackage{tikz-cd}
+\usepackage{quiver}
+\usepackage[most]{tcolorbox}
+\usepackage{thmtools}
+\input{macros}
+
+\usepackage{hyperref} 
+\hypersetup{
+    colorlinks=true,
+    citecolor=Plum,
+    linkcolor=Plum,
+    filecolor=Plum,      
+    urlcolor=WildStrawberry,
+    pdfpagemode=FullScreen,
+    }
+
+\title{Informal Talk Notes for the \href{https://padicpeople.carrd.co/}{P-Adic People Seminar}}
+
+\date{February 2026}
+
+\begin{document}
+\author{Stephanie A.}
+\maketitle
+\tableofcontents
+
+
+\input{TOC/AlgArithmetic (1)}
+\bibliographystyle{alpha}
+\bibliography{bib}\label{bib}
+\end{document}
+Algorithm Steps (for \(\cdots a_{1}a_{0}+\cdots b_{1}b_{0}\)) Start at the Rightmost Digit (Index 0):Calculate \(a_{0}+b_{0}=c_{0}+\epsilon _{0}p\), where \(c_{0}\) is the rightmost digit of the sum and \(\epsilon _{0}\) is the carry (either 0 or 1).Move Left (Index \(i\ge 1\)):Calculate \(a_{i}+b_{i}+\epsilon _{i-1}=c_{i}+\epsilon _{i}p\), where \(\epsilon _{i-1}\) is the carry from the previous step, \(c_{i}\) is the next digit of the sum, and \(\epsilon _{i}\) is the new carry.Repeat Infinitely: Continue this process to the left for all digits
